@@ -1,8 +1,8 @@
 const initialeState={
-    items:[
-        {name:'tvs' , displayName:'TV' , description:"Samsung , LG"},
-        {name:'books' ,displayName:'Books' , description:"History , Mathmatics" }
-    ], 
+    // items:[
+    //     {name:'tvs' , displayName:'TV' , description:"Samsung , LG"},
+    //     {name:'books' ,displayName:'Books' , description:"History , Mathmatics" }
+    // ], 
     activatedCategory: '',
 }
 
@@ -17,6 +17,7 @@ export default (state=initialeState , action)=>{
    switch(type){
 
     case ACTIONS.ACTIVE:
+      console.log("Active category" , state)
       return { ...state, activatedCategory: payload, activatedDescription: payload.description }
       
 
